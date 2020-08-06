@@ -3,7 +3,9 @@ var root = new Vue({
     data: {
         number: "",
         message: "",
-        url: ""
+        url: "",
+        msgCopy: "Copiar"
+
     },
     methods: {
         generate() {
@@ -11,6 +13,9 @@ var root = new Vue({
             let msg = encodeURI(this.message)
             this.url = `https://wa.me/send?phone=${num}&text=${msg}`
             console.log('Yes')
+        },
+        copy(){
+            this.msgCopy = "Copiado"
         }
     }
 });

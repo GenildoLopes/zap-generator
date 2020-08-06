@@ -10,7 +10,8 @@
 
         <!-- VueJS -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
+        <!-- ClipboardJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
         <!-- Bootstrap 4 -->
         <link
             rel="stylesheet"
@@ -22,6 +23,7 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
+        <h2 class="text-center mt-2">Zap Generator</h2>
         <div id="app">
             <!-- Form -->
             <div class="form-group mt-5">
@@ -45,7 +47,7 @@
                     class="btn btn-primary btn-lg mt-5"
                     data-toggle="modal"
                     data-target="#modelId"
-                    v-on:click="generate()"
+                    v-on:click="generate"
                 >
                     Gerar Link
                 </button>
@@ -73,14 +75,22 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                {{ url }}
+                                <textarea
+                                type="text"
+                                id="copy"
+                                v-bind:value="url"
+                                rows="4"
+                                cols="37"
+                                ></textarea>
                             </div>
                             <div class="modal-footer">
                                 <button
                                 type="button"
                                 class="btn btn-primary"
+                                data-clipboard-target="#copy"
+                                v-on:click="copy"
                                 >
-                                    Copiar
+                                    {{ msgCopy }}
                                 </button>
                             </div>
                         </div>
@@ -107,5 +117,8 @@
             crossorigin="anonymous"
         ></script>
         <script src="js/main.js"></script>
+        <script>
+            new ClipboardJS('.btn');
+        </script>
     </body>
 </html>
