@@ -1,0 +1,17 @@
+body {
+    background: #80e480;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    font-size: 1.4rem;
+}
+
+label {
+    font-size: 1.4rem;
+    text-align: center;
+}
