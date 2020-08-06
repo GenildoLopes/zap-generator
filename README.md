@@ -1,5 +1,7 @@
 # zap-generator
 
-Um gerador de links para chats do WhatsApp feitos com o VueJS.
+Um gerador de links para chats do WhatsApp.
 
-Baseado no seguinte projeto: https://www.youtube.com/playlist?list=PLO_rCBvOTYCdOCfTode1IMveCxVxdtP0_
+Frameworks Utilizados: VueJS, Bootstrap 4 e ClipboardJS.
+
+Adaptado do seguinte projeto: https://www.youtube.com/playlist?list=PLO_rCBvOTYCdOCfTode1IMveCxVxdtP0_
